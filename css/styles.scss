@@ -1,0 +1,115 @@
+$primary: #ffb300;
+$theme-colors: (
+    "primary":#ffb300,
+    "success":#ff00fb
+);
+$container-max-widths: (
+    xl: 1240px
+);
+
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import "../scss/bootstrap";
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Oswald, sans-serif;
+    text-transform: uppercase;
+}
+
+.navbar { 
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: Oswald, sans-serif;
+    font-size: 15px;
+    line-height: 4;
+
+    a:hover {
+        color: theme-color("primary") !important;
+    }
+
+    .dropdown-menu {
+        padding: 0;
+        border-radius: 0;
+
+        .dropdown-item {
+            border-bottom: 1px solid $gray-200;
+        }
+    }
+}
+
+#top-banner {
+    background-image: url("/images/CAT-Website-ProgBan-GEN-6-2200x683.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    .banner-title {
+        font-size: 4.5rem;
+    }
+}
+
+.ribbon-title {
+    margin-left: -1.5rem;
+    text-indent: 1.5em;
+}
+
+#passion-logo {
+    path {
+        fill: red;
+        stroke-width: 1;
+        stroke: green;
+        
+    }
+ 
+    #P {
+        fill: yellow;
+        animation: come-on-in 1s;
+    }
+}
+
+@keyframes come-on-in {
+    from {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.card-deck {
+    .card-image {
+        height: 250px;
+
+        img {
+            object-fit: cover;
+            height: 250px;
+        }
+
+        .card-title {
+            position: absolute;
+            z-index: 10;
+            top: 1rem;
+            left: 0;
+            background: rgba(255,255,255, 0.8);
+            padding: 10px;
+        }
+    }
+}
+
+
+.title-bar {
+    border-top: 3px solid black;
+    width: 60px;
+    margin: 2em auto;
+}
+
+.social-icons {
+    a {
+        color: white;
+        text-decoration: none;
+        font-size:2.5em;
+        margin-right: 0.5em;
+    }
+}
